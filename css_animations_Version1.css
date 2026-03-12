@@ -1,0 +1,126 @@
+/* ============================================
+   ANIMATIONS & TRANSITIONS
+   ============================================ */
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes scaleIn {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes pulse {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.5;
+    }
+}
+
+@keyframes glow {
+    0%, 100% {
+        box-shadow: 0 0 20px rgba(15, 118, 110, 0.3);
+    }
+    50% {
+        box-shadow: 0 0 40px rgba(15, 118, 110, 0.6);
+    }
+}
+
+/* Apply animations */
+.hero-text {
+    animation: fadeIn 0.8s ease-out;
+}
+
+.hero-text h1 {
+    animation: slideInLeft 0.8s ease-out;
+    animation-delay: 0.1s;
+    animation-fill-mode: both;
+}
+
+.hero-subtitle {
+    animation: slideInLeft 0.8s ease-out;
+    animation-delay: 0.2s;
+    animation-fill-mode: both;
+}
+
+.hero-buttons {
+    animation: slideInLeft 0.8s ease-out;
+    animation-delay: 0.3s;
+    animation-fill-mode: both;
+}
+
+.service-card {
+    animation: scaleIn 0.5s ease-out;
+}
+
+.service-card:nth-child(1) { animation-delay: 0s; }
+.service-card:nth-child(2) { animation-delay: 0.1s; }
+.service-card:nth-child(3) { animation-delay: 0.2s; }
+.service-card:nth-child(4) { animation-delay: 0.3s; }
+.service-card:nth-child(5) { animation-delay: 0.4s; }
+.service-card:nth-child(6) { animation-delay: 0.5s; }
+
+.reason-card {
+    animation: fadeIn 0.6s ease-out;
+}
+
+.testimonial-card {
+    animation: scaleIn 0.5s ease-out;
+}
+
+.btn-primary {
+    animation: glow 2s ease-in-out infinite;
+}
+
+/* Smooth transitions */
+* {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
